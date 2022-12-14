@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>List Of Employee</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+ integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+	<div class="container">
+		<h1>List Of Employee</h1>
+		<hr>
+		<h2>New_Employee </h2>
+		
+		<form action="#" th:action="@{/saveEmployee}" th:object="${employee}"
+		 method="POST">
+
+		<input type="text" th:field="*{name}"placeholder="Employee Name" class="form-control mb-4 col-4">
+		<input type="text" th:field="*{email}"placeholder="Employee Email" class="form-control mb-4 col-4">
+		<input type="text" th:field="*{dob}"placeholder="Employee Dob" class="form-control mb-4 col-4">
+		<input type="text" th:field="*{age}"placeholder="Employee Age" class="form-control mb-4 col-4">
+		<input type="text" th:field="*{salary}"placeholder="Employee Salary" class="form-control mb-4 col-4">
+		<input type="text" th:field="*{status}"placeholder="Employee status" class="form-control mb-4 col-4">
+		
+	
+		<button type="submit" class="btn btn-info col-2">Save Employee</button>
+			
+		
+		</form>
+		<hr>
+		<a th:href="@{/}">Back to List Of Employee</a>
+		
+	</div>
+	
+
+</body>
+</html>
